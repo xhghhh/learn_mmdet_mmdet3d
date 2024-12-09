@@ -4,3 +4,5 @@ import mmdet3d
 print(mmdet3d.__version__)  # 0.17.1
 import mmcv
 print(mmcv.__version__)  # 1.4.0
+import mmengine
+print(mmengine.__version__) # 0.10.5
