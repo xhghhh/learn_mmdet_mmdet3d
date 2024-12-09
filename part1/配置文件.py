@@ -394,6 +394,7 @@ default_scope = 'mmdet3d'  # 寻找模块的默认注册器域。
 
 env_cfg = dict(
     cudnn_benchmark=False,  # 是否启用 cudnn benchmark
+
     mp_cfg=dict(  # 多进程配置
         mp_start_method='fork',  # 使用 fork 来启动多进程。'fork' 通常比 'spawn' 更快，但可能不安全。请参考 https://github.com/pytorch/pytorch/issues/1355
         opencv_num_threads=0),  # 关闭 opencv 的多进程以避免系统超负荷
@@ -401,6 +402,7 @@ env_cfg = dict(
 
 vis_backends = [dict(type='LocalVisBackend')]  # 可视化后端。
 # 请参考 https://mmengine.readthedocs.io/zh_CN/latest/advanced_tutorials/visualization.html
+
 visualizer = dict(
     type='Det3DLocalVisualizer', vis_backends=vis_backends, name='visualizer')
 
